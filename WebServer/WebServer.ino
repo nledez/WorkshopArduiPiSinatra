@@ -64,10 +64,7 @@ void loop() {
           client.println("HTTP/1.1 200 OK");
           client.println("Content-Type: text/html");
           client.println("Connection: close");  // the connection will be closed after completion of the response
-	  client.println("Refresh: 5");  // refresh the page automatically every 5 sec
           client.println();
-          client.println("<!DOCTYPE HTML>");
-          client.println("<html>");
           // "{ "0":12, "1":45, "2":65}"
           // output the value of each analog input pin
           client.print("{");
@@ -79,8 +76,7 @@ void loop() {
             client.print(sensorReading);
             client.print(",");
           }
-          client.println("\"-1\":0}");       
-          client.println("</html>");
+          client.print("\"-1\":0}");       
           break;
         }
         if (c == '\n') {
