@@ -1,8 +1,14 @@
 require 'sinatra'
 require 'json'
+require 'net/http'
 
 get '/temperatures' do
-  temps_json = '{"0":1023,"1":1023,"2":737,"3":550,"4":409,"5":333,"-1":0}'
+  url = URI.parse('http://192.168.2.177/')
+  req = Net::HTTP::Get.new(url.path)
+  res = Net::HTTP.start(url.host, url.port) {|http|
+    http.request(req)
+  }
+  temps_json = res.body
   temps = JSON.parse(temps_json)
   temps.to_s
 end
