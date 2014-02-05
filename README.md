@@ -18,7 +18,7 @@ Se déconnecter puis se reconnecter (pour recharger le fichier .bashrc)
 Exécuter :
 
     gem install bundler
-    https://github.com/nledez/WorkshopArduiPiSinatra.git
+    git clone https://github.com/nledez/WorkshopArduiPiSinatra.git
     cd WorkshopArduiPiSinatra
     bundle
 
@@ -28,8 +28,22 @@ Maintenant, pour lancer le serveur :
 
 Pour connaitre, les arguments acceptés par le serveur :
 
-    bundle exec ruby 00-hello.rb
+    bundle exec ruby 00-hello.rb -h
 
 Donc par exemple, pour que le serveur soit accessible par son adresse IP "externe" :
 
     bundle exec ruby 00-hello.rb -o 0.0.0.0
+
+Ou :
+
+    RACK_ENV=production bundle exec ruby 01-get-temp.rb
+
+Pour fonctionner avec Nginx
+---------------------------
+
+    apt-get install nginx
+    /etc/init.d/nginx start
+    cd /etc/nginx/sites-enabled/
+    rm default
+    ln -s /home/pi/WorkshopArduiPiSinatra/WorkshopArduiPiSinatra-site-nginx.conf .
+    /etc/init.d/nginx restart
