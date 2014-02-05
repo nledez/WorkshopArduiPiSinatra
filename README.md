@@ -47,3 +47,10 @@ Pour fonctionner avec Nginx
     rm default
     ln -s /home/pi/WorkshopArduiPiSinatra/WorkshopArduiPiSinatra-site-nginx.conf .
     /etc/init.d/nginx restart
+
+Pour l'autentification
+----------------------
+
+    apt-get install -y apache2-utils
+    htpasswd -cb /home/pi/htpasswd temp temp
+    htpasswd -b /home/pi/htpasswd temp tempo
