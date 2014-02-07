@@ -38,6 +38,14 @@ Ou :
 
     RACK_ENV=production bundle exec ruby 01-get-temp.rb
 
+À chaque fois que l'un des fichiers "Gemfile*" change, il faut prendre en compte les modifications avec la commande :
+
+    bundle install
+    
+Ou son raccourcis :
+
+    bundle install
+
 Pour fonctionner avec Nginx
 ---------------------------
 
