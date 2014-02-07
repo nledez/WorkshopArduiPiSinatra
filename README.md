@@ -42,9 +42,9 @@ Ou :
 
     bundle install
     
-Ou son raccourcis :
+Ou son raccourci :
 
-    bundle install
+    bundle
 
 Pour fonctionner avec Nginx
 ---------------------------
