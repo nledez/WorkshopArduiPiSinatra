@@ -55,6 +55,7 @@ Pour fonctionner avec Nginx
     rm default
     ln -s /home/pi/WorkshopArduiPiSinatra/WorkshopArduiPiSinatra-site-nginx.conf .
     /etc/init.d/nginx restart
+    bundle exec -c /home/pi/WorkShopArduiPiSinatra/config/unicorn.rb -E production -D
 
 Pour l'autentification
 ----------------------
