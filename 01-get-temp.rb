@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'erb'
+require 'haml'
 require 'json'
 require 'net/http'
 
@@ -22,7 +22,7 @@ class MoniteurTemperature < Sinatra::Base
   get '/temperatures' do
     prendreLaTemperature
     @temps = @@temps
-    erb :temperatures
+    haml :temperatures, :format => :html5
   end
 
   get '/temperatures.json' do

@@ -1,0 +1,14 @@
+%html
+  %head
+    %title Les temperatures
+  %body
+    %table{:border => "1"}
+      %thead
+        %tr
+          %td Piece
+          %td Temperature
+      %tbody
+        - @temps.each do |temp|
+          %tr
+            %td= temp[0]
+            %td= temp[1]
