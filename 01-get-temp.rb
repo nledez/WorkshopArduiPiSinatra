@@ -19,6 +19,10 @@ class MoniteurTemperature < Sinatra::Base
     @@temps = JSON.parse(temps_json)
   end
 
+  get '/' do
+    redirect to('/temperatures')
+  end
+
   get '/temperatures' do
     prendreLaTemperature
     @temps = @@temps
