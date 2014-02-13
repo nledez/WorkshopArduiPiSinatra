@@ -1,6 +1,36 @@
 WorkshopArduiPiSinatra
 ======================
 
+Prérequis
+---------
+
+Installer un Raspbery π tout frais avec une http://www.raspberrypi.org/downloads[Raspbian].
+Savoir se connecter en SSH sur une machine.
+
+    ssh pi@ip-de-mon-raspberypi
+
+Ça marche aussi en direct sur la console. Mais c'est moins facile de faire de copier/coller (certains comprendons).
+
+Vérifier 2/3 trucs
+------------------
+
+Quelques commandes à taper pour voir si tout marche :
+
+    pi@raspberrypi ~ $ which ruby
+    /usr/bin/ruby
+    pi@raspberrypi ~ $ which gem
+    /usr/bin/gem
+    pi@raspberrypi ~ $ ruby -v
+    ruby 1.9.3p194 (2012-04-20 revision 35410) [arm-linux-eabihf]
+    pi@raspberrypi ~ $ gem -v
+    1.8.23
+
+Faire la mise à jour de tout ça avant de démarrer
+-------------------------------------------------
+
+    sudo apt-get update
+    sudo apt-get dist-upgrade
+
 Comment installer tout ça
 -------------------------
 
@@ -12,6 +42,8 @@ Mettre au début du fichier "~/.bashrc" (juste avant "[ -z "$PS1" ] && return") 
 Créer un fichier "~/.gemrc" avec :
 
     gem: --no-rdoc --no-ri
+
+Les deux fichiers sont fournis en exemple.
 
 Se déconnecter puis se reconnecter (pour recharger le fichier .bashrc)
 
