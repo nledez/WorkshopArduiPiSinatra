@@ -4,7 +4,7 @@ WorkshopArduiPiSinatra
 Prérequis
 ---------
 
-Installer un Raspbery π tout frais avec une http://www.raspberrypi.org/downloads[Raspbian].
+Installer un Raspbery π tout frais avec une [Raspbian](http://www.raspberrypi.org/downloads "téléchargement de Raspbian").
 Savoir se connecter en SSH sur une machine.
 
     ssh pi@ip-de-mon-raspberypi
