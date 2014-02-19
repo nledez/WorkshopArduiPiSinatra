@@ -3,6 +3,10 @@
   %head
     %title Les temperatures
   %body
+    %form{:action => "/lumiere", :method => "post"}
+      %input{:type => "submit", :name => "action[eteint]", :value => "Eteindre"}
+      %input{:type => "submit", :name => "action[allumer]", :value => "Allumer"}
+    %span= @lumiere
     %table
       %thead
         %tr
