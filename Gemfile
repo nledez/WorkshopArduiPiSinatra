@@ -10,6 +10,8 @@ group :development, :test do
   gem 'debugger'
   gem 'pry'
   gem 'pry-debugger'
+
+  gem 'rspec'
 end
 
 gem "unicorn"
