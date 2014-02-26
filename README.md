@@ -95,3 +95,12 @@ Pour l'autentification
     apt-get install -y apache2-utils
     htpasswd -cb /home/pi/htpasswd temp temp
     htpasswd -b /home/pi/htpasswd temp tempo
+
+Pour la partie reload + debug
+-----------------------------
+
+Voir les pages :
+
+https://github.com/hlee/sinatra_debugger_example
+
+http://www.sinatrarb.com/contrib/reloader.html
