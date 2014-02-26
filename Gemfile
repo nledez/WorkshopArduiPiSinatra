@@ -12,6 +12,12 @@ group :development, :test do
   gem 'pry-debugger'
 
   gem 'rspec'
+
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'growl'
 end
+
+gem 'simplecov', :require => false, :group => :test
 
 gem "unicorn"
