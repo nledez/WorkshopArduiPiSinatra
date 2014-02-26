@@ -2,8 +2,17 @@ require 'sinatra'
 require 'haml'
 require 'json'
 require 'net/http'
+require 'sinatra/reloader'
+require 'awesome_print'
+require 'debugger'
+require 'pry'
+require 'pry-debugger'
 
 class MoniteurTemperature < Sinatra::Base
+  configure :development do
+    register Sinatra::Reloader
+  end
+
   def valeursSurArduino(uri)
     url = URI.parse(uri)
     req = Net::HTTP::Get.new(url.path)
