@@ -1,3 +1,4 @@
+require File.dirname(__FILE__) + '../../spec_helper'
 ENV['RACK_ENV'] = 'test'
 
 require 'home'
