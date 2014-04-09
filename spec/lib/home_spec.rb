@@ -5,11 +5,11 @@ require 'home'
 require 'rspec'
 require 'rack/test'
 
-describe 'The Home App' do
+describe 'Temperature App' do
   include Rack::Test::Methods
 
   def app
-    Sinatra::Application
+    @app || TemperatureServer
   end
 
   it "save temperature" do
@@ -30,6 +30,5 @@ describe 'The Home App' do
 
     get '/temperature'
     expect(last_response.body).to eq('[18,19]')
-
   end
 end
