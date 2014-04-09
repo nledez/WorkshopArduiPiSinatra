@@ -22,4 +22,14 @@ describe 'The Home App' do
     expect(last_response).to be_ok
     expect(last_response.body).to eq('Hello toto')
   end
+
+  it "save temperature" do
+    get '/temperature'
+    expect(last_response).to be_ok
+    expect(last_response.body).to eq('[]')
+
+    post '/temperature', params={:temperature => 18}
+    expect(last_response).to be_ok
+    expect(last_response.body).to eq('18')
+  end
 end

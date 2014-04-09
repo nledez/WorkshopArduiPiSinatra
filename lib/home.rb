@@ -7,3 +7,11 @@ get '/' do
     "Hello #{params[:name]}".strip
   end
 end
+
+get '/temperature' do
+  '[]'
+end
+
+post '/temperature' do
+  '18'
+end
