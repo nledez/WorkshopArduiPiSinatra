@@ -3,6 +3,8 @@ source "https://rubygems.org"
 gem "sinatra"
 gem "sinatra-contrib"
 gem "haml"
+gem "mongo"
+gem "bson_ext"
 
 group :development, :test do
   gem 'awesome_print'
