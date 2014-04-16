@@ -1,3 +1,4 @@
-require './01-get-temp.rb'
+require './lib/home.rb'
 
-run MoniteurTemperature
+my_app = TemperatureServer.new
+run my_app
