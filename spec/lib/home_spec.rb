@@ -46,5 +46,14 @@ describe 'Temperature App' do
       {"temperature" => "18"},
       {"temperature" => "19"}
     ])
+
+    post '/temperature', params={:temperature => 15, :humidity => 40}
+
+    get '/temperature'
+    expect(JSON.parse(last_response.body)).to eq([
+      {"temperature" => "18"},
+      {"temperature" => "19"},
+      {"temperature" => "15", "humidity" => "40"}
+    ])
   end
 end
